@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Chat</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="body">
+    <header>
+        <div class="nav" id="nav">
+            <div class="nav-left">
+                <div class="nav1">
+                    <span class="menu material-symbols-outlined" onclick="togglenav()">
+                        menu
+                    </span>
+                    <div class="sidemenuebar" id="sidemenuebar">
+                        <div class="new-chat-btn"><button><svg xmlns="http://www.w3.org/2000/svg" height="24" width="24"
+                                    fill="currentColor">
+                                    <path
+                                        d="M3 20V5q0-.825.587-1.413Q4.175 3 5 3h12q.825 0 1.413.587Q19 4.175 19 5v5.075q-.25-.05-.5-.063Q18.25 10 18 10t-.5.012q-.25.013-.5.063V5H5v10h7.075q-.05.25-.063.5-.012.25-.012.5t.012.5q.013.25.063.5H6ZM7 9h8V7H7Zm0 4h5v-2H7Zm10 7v-3h-3v-2h3v-3h2v3h3v2h-3v3ZM5 15V5v10Z">
+                                    </path>
+                                </svg>New Chat</button></div>
+                        <div class="dropdown-group">
+                            <input type="checkbox" id="shortcut-toggle">
+                            <label for="shortcut-toggle" class="dropdown-arrow">
+                                <div class="dropdown-arrow dropdown-arrow-1"><svg class=" H9UJzc" role="presentation"
+                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960" fill="#041E49">
+                                        <path d="M480 696 280 497h400z"></path>
+                                    </svg>
+                                    <div class="sidebar-dropdown-text shortcuts">shortcuts
+                                    </div>
+                                </div>
+                            </label>
+                            <div class="shortcut-content">
+                                <div class="shrt-txt shortcut-home"><span class="shrt-icn material-symbols-outlined">
+                                        home
+                                    </span>Home</div>
+                                <div class="shrt-txt shortcut-mentions"><span
+                                        class="shrt-icn material-symbols-outlined">
+                                        alternate_email
+                                    </span>Mentions</div>
+                                <div class="shrt-txt shortcut-starred"><span class="shrt-icn material-symbols-outlined">
+                                        star
+                                    </span>Starred</div>
+                            </div>
+                        </div>
+
+                        <div class="dropdown-group">
+                            <input type="checkbox" id="DM-toggle">
+                            <label for="DM-toggle" class="dropdown-arrow">
+                                <div class="dropdown-arrow dropdown-arrow-2"><svg class=" H9UJzc" role="presentation"
+                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960" fill="#041E49">
+                                        <path d="M480 696 280 497h400z"></path>
+                                    </svg>
+                                    <div class="sidebar-dropdown-text direct-messages">Direct messages</div>
+                                </div>
+                            </label>
+                            <div class="DM-content">
+                                <div class="user1"><span class="material-symbols-outlined">
+                                        no_accounts
+                                    </span>Unknown user</div>
+                                <div class="user1"><span class="material-symbols-outlined">
+                                        no_accounts
+                                    </span>Unknown user</div>
+                                <div class="user1"><span class="material-symbols-outlined">
+                                        no_accounts
+                                    </span>Unknown user</div>
+                                <div class="user1"><span class="material-symbols-outlined">
+                                        no_accounts
+                                    </span>Unknown user</div>
+                            </div>
+                        </div>
+                        <div class="dropdown-group">
+                            <input type="checkbox" id="spaces-toggle">
+                            <label for="spaces-toggle" class="dropdown-arrow">
+                                <div class="dropdown-arrow dropdown-arrow-3"><svg class=" H9UJzc" role="presentation"
+                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960" fill="#041E49">
+                                        <path d="M480 696 280 497h400z"></path>
+                                    </svg>
+                                    <div class="sidebar-dropdown-text spaces">Spaces</div>
+                                </div>
+                            </label>
+                            <div class="spaces-content">
+                                <div class="space1"><span class="material-symbols-outlined">
+                                        account_box
+                                    </span>Unknown Space</div>
+                            </div>
+                        </div>
+                        <div class="dropdown-group">
+                            <input type="checkbox" id="apps-toggle">
+                            <label for="apps-toggle" class="dropdown-arrow">
+                                <div class="dropdown-arrow dropdown-arrow-4"><svg class=" H9UJzc" role="presentation"
+                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960" fill="#041E49">
+                                        <path d="M480 696 280 497h400z"></path>
+                                    </svg>
+                                    <div class="sidebar-dropdown-text apps">Apps</div>
+                                </div>
+                            </label>
+                            <div class="apps-content">
+                                <div class="empty">No apps here</div>
+                            </div>
+                        </div>
+                    </div>
+                    <img class="logo" src="https://ssl.gstatic.com/ui/v1/icons/mail/chatlogo/logo_chat_default_2x.png"
+                        width="90px" height="40px" alt="">
+                </div>
+                <div class="nav2">
+                    <div class="search-box">
+                        <button>
+                            <span class="search material-symbols-outlined">
+                                search
+                            </span>
+                        </button>
+                        <input type="text" placeholder="Search in chat">
+                    </div>
+                </div>
+            </div>
+            <div class="nav-right">
+                <div class="nav3cover">
+                    <div class="nav3">
+                        <div class="circle">
+                        </div>
+                        <select name="status" id="status">
+                            <option class="option" value="Active">Active</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="nav4">
+                    <span class="search material-symbols-outlined">
+                        help
+                    </span>
+                    <span class="search material-symbols-outlined">
+                        settings
+                    </span>
+                    <svg class="gb_F" focusable="false" viewBox="0 0 24 24" height="24px" width="24px">
+                        <path
+                            d="M6,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM16,6c0,1.1 0.9,2 2,2s2,-0.9 2,-2 -0.9,-2 -2,-2 -2,0.9 -2,2zM12,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2z">
+                        </path>
+                        <image src="https://ssl.gstatic.com/gb/images/bar/al-icon.png" alt="" height="24" width="24"
+                            style="border:none;display:none \9"></image>
+                    </svg>
+                    <div class="nightlightmodetoggle" id="nightlightmodetoggle">
+                        <button class="mode-btn" id="mode-btn">
+                            <span class="material-symbols-outlined lightmode" id="lightmode">
+                                sunny
+                            </span>
+                            <span class="material-symbols-outlined darkmode" id="darkmode">
+                                dark_mode
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="side-icon">
+        <div class="side-ico side-icon-1">
+            <img src="https://www.gstatic.com/companion/icon_assets/calendar_2020q4_2x.png" alt="">
+        </div>
+        <div class="side-ico side-icon-2">
+            <img src="https://www.gstatic.com/companion/icon_assets/keep_2020q4v3_2x.png" alt="">
+        </div>
+        <div class="side-ico side-icon-3">
+            <img src="https://www.gstatic.com/companion/icon_assets/tasks_2021_2x.png" alt="">
+        </div>
+        <div class="side-ico side-icon-4">
+            <img src="https://www.gstatic.com/companion/icon_assets/contacts_2022_2x.png" alt="">
+        </div>
+    </div>
+    <main>
+        <div class="homechatseccover">
+            <div class="home_chat_section" id="home_chat_section">
+                <h2>Home</h2>
+                <div class="home_chat_header">
+                    <div class="slider-wrapper">
+                        <input type="checkbox" id="toggle" />
+                        <label for="toggle" class="slider"></label>
+                    </div>
+                    <div class="thread-btn thread-btn">
+                        <button class="thread-btn-cover"><span class="material-symbols-outlined thread-btn-span1">
+                                gesture
+                            </span> <span class="thread-btn-span2">Thread</span></button>
+                    </div>
+                    <div class="split-btn">
+                        <button id="split-btn-cover"><span class="material-symbols-outlined split-btn-span1">
+                                splitscreen_left
+                            </span><span class="material-symbols-outlined splitscreen split-btn-span2"
+                                id="splitscreen-arrow">keyboard_arrow_down</span></button>
+                    </div>
+                </div>
+                <div class="home_chat_main">
+                    <div class="users user1"><span class="material-symbols-outlined">
+                            account_circle
+                        </span>Unknown user 1</div>
+                    <div class="users user2"><span class="material-symbols-outlined">
+                            account_circle
+                        </span>Unknown user 2</div>
+                    <div class="users user3"><span class="material-symbols-outlined">
+                            account_circle
+                        </span>Unknown user 3</div>
+                    <div class="users user4"><span class="material-symbols-outlined">
+                            account_circle
+                        </span>Unknown user 4</div>
+                    <div class="users user5"><span class="material-symbols-outlined">
+                            account_circle
+                        </span>Unknown user 5</div>
+                    <div class="users user6"><span class="material-symbols-outlined">
+                            account_circle
+                        </span>Unknown user 6</div>
+                    <div class="users user7"><span class="material-symbols-outlined">
+                            account_circle
+                        </span>Unknown user 7</div>
+                    <div class="users user8"><span class="material-symbols-outlined">
+                            account_circle
+                        </span>Unknown user 8</div>
+                    <div class="users user9"><span class="material-symbols-outlined">
+                            account_circle
+                        </span>Unknown user 9</div>
+                    <div class="users user10"><span class="material-symbols-outlined">
+                            account_circle
+                        </span>Unknown user 10</div>
+                </div>
+            </div>
+        </div>
+        <div class="chat_section" id="chat_section">
+        </div>
+    </main>
+    <footer></footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
